@@ -1,0 +1,12 @@
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\SessionInterface\bin\Debug\net6.0\SessionInterface.deps.json
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\SessionInterface\bin\Debug\net6.0\SessionInterface.dll
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\SessionInterface\bin\Debug\net6.0\SessionInterface.pdb
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\SessionInterface\obj\Debug\net6.0\SessionInterface.csproj.AssemblyReference.cache
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\SessionInterface\obj\Debug\net6.0\SessionInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\SessionInterface\obj\Debug\net6.0\SessionInterface.AssemblyInfoInputs.cache
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\SessionInterface\obj\Debug\net6.0\SessionInterface.AssemblyInfo.cs
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\SessionInterface\obj\Debug\net6.0\SessionInterface.csproj.CoreCompileInputs.cache
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\SessionInterface\obj\Debug\net6.0\SessionInterface.dll
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\SessionInterface\obj\Debug\net6.0\refint\SessionInterface.dll
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\SessionInterface\obj\Debug\net6.0\SessionInterface.pdb
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\SessionInterface\obj\Debug\net6.0\ref\SessionInterface.dll

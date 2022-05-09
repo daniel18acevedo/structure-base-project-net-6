@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "mmG1uD2za3faDnWgm97b6C0VMmpQAf8IB+yFA5srCye0KMBTStN2ZGDrRdA8U8AzcObJspNmGgSob0dHyZElCg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicValidator\\BusinessLogicValidator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SURFACE\\.nuget\\packages\\fluentvalidation\\11.0.0\\fluentvalidation.11.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

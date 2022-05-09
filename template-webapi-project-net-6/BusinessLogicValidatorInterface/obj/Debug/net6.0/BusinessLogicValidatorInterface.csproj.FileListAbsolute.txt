@@ -1,0 +1,12 @@
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\BusinessLogicValidatorInterface\bin\Debug\net6.0\BusinessLogicValidatorInterface.deps.json
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\BusinessLogicValidatorInterface\bin\Debug\net6.0\BusinessLogicValidatorInterface.dll
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\BusinessLogicValidatorInterface\bin\Debug\net6.0\BusinessLogicValidatorInterface.pdb
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\BusinessLogicValidatorInterface\obj\Debug\net6.0\BusinessLogicValidatorInterface.csproj.AssemblyReference.cache
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\BusinessLogicValidatorInterface\obj\Debug\net6.0\BusinessLogicValidatorInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\BusinessLogicValidatorInterface\obj\Debug\net6.0\BusinessLogicValidatorInterface.AssemblyInfoInputs.cache
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\BusinessLogicValidatorInterface\obj\Debug\net6.0\BusinessLogicValidatorInterface.AssemblyInfo.cs
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\BusinessLogicValidatorInterface\obj\Debug\net6.0\BusinessLogicValidatorInterface.csproj.CoreCompileInputs.cache
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\BusinessLogicValidatorInterface\obj\Debug\net6.0\BusinessLogicValidatorInterface.dll
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\BusinessLogicValidatorInterface\obj\Debug\net6.0\refint\BusinessLogicValidatorInterface.dll
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\BusinessLogicValidatorInterface\obj\Debug\net6.0\BusinessLogicValidatorInterface.pdb
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\BusinessLogicValidatorInterface\obj\Debug\net6.0\ref\BusinessLogicValidatorInterface.dll

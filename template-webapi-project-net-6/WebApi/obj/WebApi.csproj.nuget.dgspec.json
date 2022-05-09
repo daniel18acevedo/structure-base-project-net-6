@@ -1,0 +1,783 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\WebApi\\WebApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicAdapter\\BusinessLogicAdapter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicAdapter\\BusinessLogicAdapter.csproj",
+        "projectName": "BusinessLogicAdapter",
+        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicAdapter\\BusinessLogicAdapter.csproj",
+        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicAdapter\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicValidatorInterface\\BusinessLogicValidatorInterface.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicValidatorInterface\\BusinessLogicValidatorInterface.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogic\\BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogic\\BusinessLogic.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Model\\Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicValidatorInterface\\BusinessLogicValidatorInterface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicValidatorInterface\\BusinessLogicValidatorInterface.csproj",
+        "projectName": "BusinessLogicValidatorInterface",
+        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicValidatorInterface\\BusinessLogicValidatorInterface.csproj",
+        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicValidatorInterface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogic\\BusinessLogic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogic\\BusinessLogic.csproj",
+        "projectName": "BusinessLogic",
+        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogic\\BusinessLogic.csproj",
+        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogic\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicValidatorInterface\\BusinessLogicValidatorInterface.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicValidatorInterface\\BusinessLogicValidatorInterface.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Context\\Context.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Context\\Context.csproj",
+        "projectName": "Context",
+        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Context\\Context.csproj",
+        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Context\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj",
+        "projectName": "DataAccessInterface",
+        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj",
+        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Factory\\Factory.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Factory\\Factory.csproj",
+        "projectName": "Factory",
+        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Factory\\Factory.csproj",
+        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Factory\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicAdapter\\BusinessLogicAdapter.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicAdapter\\BusinessLogicAdapter.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogic\\BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogic\\BusinessLogic.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Context\\Context.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Context\\Context.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Session\\Session.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Session\\Session.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Model\\Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Model\\Model.csproj",
+        "projectName": "Model",
+        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj",
+        "projectName": "SessionInterface",
+        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj",
+        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\SessionInterface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Session\\Session.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Session\\Session.csproj",
+        "projectName": "Session",
+        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Session\\Session.csproj",
+        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Session\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\WebApi\\WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\WebApi\\WebApi.csproj",
+        "projectName": "WebApi",
+        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicAdapter\\BusinessLogicAdapter.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicAdapter\\BusinessLogicAdapter.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Factory\\Factory.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Factory\\Factory.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Model\\Model.csproj"
+              },
+              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj": {
+                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\bin\Debug\net6.0\DataAccess.dll
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\bin\Debug\net6.0\DataAccessInterface.dll
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\bin\Debug\net6.0\DataAccessInterface.pdb
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\obj\Debug\net6.0\DataAccess.dll
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+C:\Users\SURFACE\Documents\GitHub\template-webapi-project-net-6\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
