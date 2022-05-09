@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj": {
+    "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj",
         "projectName": "DataAccessInterface",
-        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj",
-        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\obj\\",
+        "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj",
+        "packagesPath": "C:\\Users\\Daniel Acevedo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Daniel Acevedo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,36 +59,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Daniel Acevedo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Daniel Acevedo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj": {
-                "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj"
+              "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj": {
+                "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj"
               }
             }
           }
@@ -124,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

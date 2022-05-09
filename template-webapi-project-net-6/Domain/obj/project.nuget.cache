@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C7OgKN2kTSFjihyVkJ1c3NNMrKbAhbhn/Z8uG5Uju1YCUsTw6CSMZMgXH8HWoQIe95GapFbjsx7O6Y2fGmt4yA==",
+  "dgSpecHash": "2UFgrZ8bbmYKjEDYWCgYUtc4PiiSYdK3WkG+PS9UEIl/iRWA3LAbKGWH87kq8FlsMVrA/3Zah7ZRo2wGq+l1Hw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

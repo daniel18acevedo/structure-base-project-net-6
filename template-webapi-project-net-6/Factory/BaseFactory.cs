@@ -19,5 +19,6 @@ public class BaseFactory
         this._services.InjectBusinessLogics();
         this._services.InjectDataAccess(this._configuration.GetConnectionString("MyDataBaseConnectionString"));
         this._services.InjectSession();
+        this._services.InjectValidators();
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Context;
 using DataAccess;
+using DataAccessInterface;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,6 +16,6 @@ internal static class DataAccessFactory
         services.AddDbContext<DbContext, MyContext>(options =>{
             options.UseSqlServer(connectionString);
         });
-        services.AddScoped<UnitOfWork>();
+        services.AddTransient<IUnitOfWork, UnitOfWork>();
     }
 }

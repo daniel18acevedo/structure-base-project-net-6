@@ -7,11 +7,11 @@ using Domain;
 using FluentValidation;
 
 namespace BusinessLogicValidator.Entities;
-public class UserValidation : BaseValidator<User>
+public class UserValidator : BaseValidator<User>
 {
     private readonly IRepository<User> _userRepository;
 
-    public UserValidation(IUnitOfWork unitOfWork)
+    public UserValidator(IUnitOfWork unitOfWork)
     {
         this._userRepository = unitOfWork.GetRepository<User>();
 

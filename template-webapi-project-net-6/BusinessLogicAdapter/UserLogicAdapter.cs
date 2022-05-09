@@ -43,6 +43,6 @@ public class UserLogicAdapter : BaseLogicAdapter
 
         var userConverted = this._mapper.Map<UserDetailInfoModel>(userCreated);
 
-        return userCreated;
+        return userConverted;
     }
 }

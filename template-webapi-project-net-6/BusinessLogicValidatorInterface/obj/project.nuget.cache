@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HRLIYJMqmCDV9HIGctkOXZ74UYk/aX+zZND14UipGuI7wIH0XAVHNWtnItnLfD0sjAXgK2B/oK3aySGBurVU+w==",
+  "dgSpecHash": "KSg9jGflMzbYsYX5bfagh8lLu0MZHDHBVK9CBuf6CzQUYm+lfHkpbzqv84pK8DvHCYXYv+S/Sn/JUqWg5Z45eQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicValidatorInterface\\BusinessLogicValidatorInterface.csproj",
+  "projectFilePath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\BusinessLogicValidatorInterface\\BusinessLogicValidatorInterface.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -11,7 +11,7 @@ using WebApi.Filters;
 namespace WebApi.Controllers
 {
     [Route("users")]
-    [AuthenticationFilter]
+    //[AuthenticationFilter]
     public class UserController : Controller
     {
         private readonly UserLogicAdapter _userLogicAdapter;

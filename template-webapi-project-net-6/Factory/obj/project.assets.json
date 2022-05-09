@@ -27,6 +27,15 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "FluentValidation/11.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -653,6 +662,23 @@
           "bin/placeholder/BusinessLogicAdapter.dll": {}
         }
       },
+      "BusinessLogicValidator/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BusinessLogicValidatorInterface": "1.0.0",
+          "DataAccessInterface": "1.0.0",
+          "Domain": "1.0.0",
+          "FluentValidation": "11.0.0",
+          "Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusinessLogicValidator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessLogicValidator.dll": {}
+        }
+      },
       "BusinessLogicValidatorInterface/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -777,6 +803,27 @@
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "icon.png",
         "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+      ]
+    },
+    "FluentValidation/11.0.1": {
+      "sha512": "fcL5zF/glDwskUtpL0IfBupVWTChxOOvVs+dAA7Gme5NjIeJBiFKWq3eZV1O+AigucnBTr8SWG7wRRn+PgFnTw==",
+      "type": "package",
+      "path": "fluentvalidation/11.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.0.1.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -1951,6 +1998,11 @@
       "path": "../BusinessLogicAdapter/BusinessLogicAdapter.csproj",
       "msbuildProject": "../BusinessLogicAdapter/BusinessLogicAdapter.csproj"
     },
+    "BusinessLogicValidator/1.0.0": {
+      "type": "project",
+      "path": "../BusinessLogicValidator/BusinessLogicValidator.csproj",
+      "msbuildProject": "../BusinessLogicValidator/BusinessLogicValidator.csproj"
+    },
     "BusinessLogicValidatorInterface/1.0.0": {
       "type": "project",
       "path": "../BusinessLogicValidatorInterface/BusinessLogicValidatorInterface.csproj",
@@ -1997,9 +2049,11 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
       "BusinessLogic >= 1.0.0",
       "BusinessLogicAdapter >= 1.0.0",
+      "BusinessLogicValidator >= 1.0.0",
       "Context >= 1.0.0",
       "DataAccess >= 1.0.0",
       "DataAccessInterface >= 1.0.0",
+      "FluentValidation >= 11.0.1",
       "Microsoft.EntityFrameworkCore >= 6.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.4",
       "Microsoft.Extensions.DependencyInjection >= 6.0.0",
@@ -2008,52 +2062,54 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SURFACE\\.nuget\\packages\\": {}
+    "C:\\Users\\Daniel Acevedo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Factory\\Factory.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\Factory\\Factory.csproj",
       "projectName": "Factory",
-      "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Factory\\Factory.csproj",
-      "packagesPath": "C:\\Users\\SURFACE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Factory\\obj\\",
+      "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\Factory\\Factory.csproj",
+      "packagesPath": "C:\\Users\\Daniel Acevedo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\Factory\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SURFACE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Daniel Acevedo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicAdapter\\BusinessLogicAdapter.csproj": {
-              "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogicAdapter\\BusinessLogicAdapter.csproj"
+            "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\BusinessLogicAdapter\\BusinessLogicAdapter.csproj": {
+              "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\BusinessLogicAdapter\\BusinessLogicAdapter.csproj"
             },
-            "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogic\\BusinessLogic.csproj": {
-              "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\BusinessLogic\\BusinessLogic.csproj"
+            "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\BusinessLogicValidator\\BusinessLogicValidator.csproj": {
+              "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\BusinessLogicValidator\\BusinessLogicValidator.csproj"
             },
-            "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Context\\Context.csproj": {
-              "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Context\\Context.csproj"
+            "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\BusinessLogic\\BusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\BusinessLogic\\BusinessLogic.csproj"
             },
-            "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj": {
-              "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj"
+            "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\Context\\Context.csproj": {
+              "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\Context\\Context.csproj"
             },
-            "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj": {
+              "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj"
             },
-            "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj": {
-              "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj"
+            "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Session\\Session.csproj": {
-              "projectPath": "C:\\Users\\SURFACE\\Documents\\GitHub\\template-webapi-project-net-6\\Session\\Session.csproj"
+            "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj": {
+              "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\SessionInterface\\SessionInterface.csproj"
+            },
+            "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\Session\\Session.csproj": {
+              "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\Session\\Session.csproj"
             }
           }
         }
@@ -2071,6 +2127,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[11.0.0, )"
+          },
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[11.0.1, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -2100,7 +2160,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
