@@ -10,39 +10,10 @@ using Model.Read;
 using Model.Write;
 
 namespace BusinessLogicAdapter;
-public class UserLogicAdapter : BaseLogicAdapter
+public class UserLogicAdapter : BaseLogicAdapter<UserModel, User>
 {
-    private readonly UserLogic _userLogic;
-    private readonly IBusinessValidator<UserModel> _userModelValidator;
-
     public UserLogicAdapter(
-        UserLogic userLogic, 
+        BaseLogic<User> userLogic,
         IBusinessValidator<UserModel> userModelValidator,
-        IMapper mapper) : base (mapper)
-    {
-        this._userLogic = userLogic;
-        this._userModelValidator = userModelValidator;
-    }
-
-    public IEnumerable<UserBasicModel> GetCollection()
-    {
-        var users = this._userLogic.GetCollection();
-
-        var usersConverted = this._mapper.Map<IEnumerable<UserBasicModel>>(users);
-
-        return usersConverted;
-    }
-
-    public UserDetailInfoModel Create(UserModel user)
-    {
-        this._userModelValidator.CreationValidation(user);
-
-        var userEntity = this._mapper.Map<User>(user);
-
-        var userCreated = this._userLogic.Add(userEntity);
-
-        var userConverted = this._mapper.Map<UserDetailInfoModel>(userCreated);
-
-        return userConverted;
-    }
+        IMapper mapper) : base(userLogic, mapper, userModelValidator) { }
 }

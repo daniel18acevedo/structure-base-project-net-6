@@ -31,7 +31,7 @@ public class UserValidator : BaseValidator<User>
 
     protected override void BusinessValidation(User user)
     {
-        var existUserWithThatEmail = this._userRepository.Exist(user => user.Email == user.Email);
+        var existUserWithThatEmail = this._userRepository.Exist(userSaved => userSaved.Email == user.Email);
 
         if(existUserWithThatEmail)
         {

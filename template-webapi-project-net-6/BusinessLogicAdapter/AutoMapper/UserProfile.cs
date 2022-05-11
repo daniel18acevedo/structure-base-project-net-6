@@ -15,6 +15,7 @@ public class UserProfile : Profile
     {
         this.FromUserModelToUser();
         this.FromUserToUserBasicModel();
+        this.FromUserToUserDetailInfoModel();
     }
 
     private void FromUserModelToUser()
@@ -25,5 +26,10 @@ public class UserProfile : Profile
     private void FromUserToUserBasicModel()
     {
         base.CreateMap<User, UserBasicModel>();
+    }
+
+    private void FromUserToUserDetailInfoModel()
+    {
+        base.CreateMap<User, UserDetailInfoModel>();
     }
 }
