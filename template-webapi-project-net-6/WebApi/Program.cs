@@ -29,5 +29,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.MapGraphQL("/graphql");
 app.Run();

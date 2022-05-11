@@ -1,3 +1,4 @@
+using Context;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,5 +21,8 @@ public class BaseFactory
         this._services.InjectDataAccess(this._configuration.GetConnectionString("MyDataBaseConnectionString"));
         this._services.InjectSession();
         this._services.InjectValidators();
+
+        this._services.AddGraphQLServer()
+        .AddQueryType<UserQuery>();
     }
 }
