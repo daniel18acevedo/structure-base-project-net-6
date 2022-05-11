@@ -16,7 +16,7 @@ namespace Context.Configurations
             this.ConfigureStartupValues(builder);
         }
 
-        protected abstract void ConfigureProperties(EntityTypeBuilder<T> builder);
+        protected virtual void ConfigureProperties(EntityTypeBuilder<T> builder) { }
         protected virtual void ConfigureRelationShips(EntityTypeBuilder<T> builder) { }
         protected virtual void ConfigureStartupValues(EntityTypeBuilder<T> builder) { }
     }

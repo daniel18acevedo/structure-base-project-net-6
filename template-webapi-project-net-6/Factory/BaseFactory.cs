@@ -1,3 +1,4 @@
+using BusinessLogicAdapter;
 using Context;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,7 +23,6 @@ public class BaseFactory
         this._services.InjectSession();
         this._services.InjectValidators();
 
-        this._services.AddGraphQLServer()
-        .AddQueryType<UserQuery>();
+        this._services.AddGraphQLServer().AddQueryType<AdapterGraphQlQuery>().AddProjections().AddFiltering().AddSorting();
     }
 }
