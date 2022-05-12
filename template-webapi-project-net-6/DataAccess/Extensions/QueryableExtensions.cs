@@ -115,25 +115,29 @@ namespace DataAccess.Extensions
         public static PagedList<T> ToPagedList<T>(this IQueryable<T> sourceElements, int pageIndex, int pageSize) where T : class
         {
             var elementesPaged = sourceElements;
-            int totalSize = sourceElements.Count();
-            int count = totalSize;
+            var totalSize = sourceElements.Count();
+            var count = totalSize;
+            var totalPages = 1;
+            var page = 1;
+            var sizeOfPage = totalSize;
 
             if (pageIndex != 0 && pageSize != 0)
             {
-                pageIndex = pageIndex < 0 ? 1 : pageIndex;
-                pageSize = pageSize < 0 ? 20 : pageSize;
+                page = pageIndex < 0 ? 1 : pageIndex;
+                sizeOfPage = pageSize < 0 ? 20 : pageSize;
 
                 count = (pageIndex - 1) * pageSize;
                 elementesPaged = elementesPaged.Skip(count).Take(pageSize);
+                totalPages = (int)Math.Ceiling(totalSize / (double)pageSize);
             }
 
             PagedList<T> pagedList = new PagedList<T>
             {
-                PageIndex = pageIndex,
-                PageSize = pageSize,
+                PageIndex = page,
+                PageSize = sizeOfPage,
                 TotalCount = totalSize,
                 Elements = elementesPaged.ToList(),
-                TotalPages = (int)Math.Ceiling(totalSize / (double)pageSize)
+                TotalPages = totalPages
             };
 
             return pagedList;

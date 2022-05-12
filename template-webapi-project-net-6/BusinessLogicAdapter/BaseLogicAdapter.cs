@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
 using BusinessLogic;
+using BusinessLogicMapperInterface;
 using BusinessLogicValidatorInterface;
 using DataAccessInterface.Collections;
 using Model;
@@ -13,31 +13,31 @@ public abstract class BaseLogicAdapter<TModel, TEntity>
 where TModel : class
 where TEntity : class
 {
-    protected readonly IMapper _mapper;
+    protected readonly IMap _mapper;
     protected readonly IBusinessValidator<TModel> _modelBusinessValidator;
     protected readonly BaseLogic<TEntity> _entityLogic;
 
-    public BaseLogicAdapter(BaseLogic<TEntity> entityLogic, IMapper mapper, IBusinessValidator<TModel> modelBusinessValidator)
+    public BaseLogicAdapter(BaseLogic<TEntity> entityLogic, IMap mapper, IBusinessValidator<TModel> modelBusinessValidator)
     {
         this._entityLogic = entityLogic;
         this._mapper = mapper;
         this._modelBusinessValidator = modelBusinessValidator;
     }
 
-    public PagedList<dynamic> GetCollection<TBasicModel>(PaginationFilter paginationFilter)
+    public PagedList<dynamic> GetCollection(PaginationFilter paginationFilter)
     {
         var elements = this.GetElementsFromLogic(paginationFilter);
 
-        var elementsConverted = this._mapper.Map<IEnumerable<TBasicModel>>(elements);
-
-        return elementsConverted;
+        return elements;
     }
 
-    protected virtual PagedList<TEntity> GetElementsFromLogic(PaginationFilter paginationFilter)
+    protected virtual PagedList<dynamic> GetElementsFromLogic(PaginationFilter paginationFilter)
     {
         var elements = this._entityLogic.GetCollection(paginationFilter);
 
-        return elements;
+        var elementsConverted = this._mapper.Map(elements);
+
+        return elementsConverted;
     }
 
     public TDetailModel Create<TDetailModel>(TModel model)

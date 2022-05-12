@@ -27,7 +27,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public IActionResult Get([FromQuery]PaginationFilter paginationFilter)
         {
-            var users = this._userLogicAdapter.GetCollection<UserBasicModel>(paginationFilter);
+            var users = this._userLogicAdapter.GetCollection(paginationFilter);
 
             return Ok(users);
         }

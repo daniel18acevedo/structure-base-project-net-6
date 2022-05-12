@@ -9,6 +9,8 @@
     <ProjectReference Include="..\Session\Session.csproj" />
     <ProjectReference Include="..\SessionInterface\SessionInterface.csproj" />
     <ProjectReference Include="..\BusinessLogicValidator\BusinessLogicValidator.csproj" />
+    <ProjectReference Include="..\BusinessLogicMapper\BusinessLogicMapper.csproj" />
+    <ProjectReference Include="..\BusinessLogicMapperInterface\BusinessLogicMapperInterface.csproj" />
   </ItemGroup>
 
   <ItemGroup>

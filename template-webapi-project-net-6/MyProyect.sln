@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicValidatorInter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{89F51563-77C0-4BEE-B03D-AEEB1CE93720}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicMapper", "BusinessLogicMapper\BusinessLogicMapper.csproj", "{F155BAEF-DF26-4C5E-A786-F7C134D119D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicMapperInterface", "BusinessLogicMapperInterface\BusinessLogicMapperInterface.csproj", "{7938AC38-256E-4DE6-BC23-8472E877DDE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,5 +94,13 @@ Global
 		{89F51563-77C0-4BEE-B03D-AEEB1CE93720}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89F51563-77C0-4BEE-B03D-AEEB1CE93720}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89F51563-77C0-4BEE-B03D-AEEB1CE93720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F155BAEF-DF26-4C5E-A786-F7C134D119D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F155BAEF-DF26-4C5E-A786-F7C134D119D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F155BAEF-DF26-4C5E-A786-F7C134D119D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F155BAEF-DF26-4C5E-A786-F7C134D119D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7938AC38-256E-4DE6-BC23-8472E877DDE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7938AC38-256E-4DE6-BC23-8472E877DDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7938AC38-256E-4DE6-BC23-8472E877DDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7938AC38-256E-4DE6-BC23-8472E877DDE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
