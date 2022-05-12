@@ -58,14 +58,9 @@ namespace DataAccess.Extensions
             // create initializers
             var bindings = properties.Where(property =>
             {
-                bool exist = false;
-                try
-                {
-                    elementType.GetProperty(property);
+                var prop = elementType.GetProperty(property);
 
-                    exist = true;
-                }
-                catch (ArgumentNullException) { }
+                var exist = prop != null;
 
                 return exist;
             }
@@ -108,20 +103,15 @@ namespace DataAccess.Extensions
 
             var props = properties.Where(property =>
             {
-                bool exist = false;
-                try
-                {
-                    elementType.GetProperty(property);
+                var prop = elementType.GetProperties().FirstOrDefault(propertyOfEntity => propertyOfEntity.Name.ToLower() == property.ToLower());
 
-                    exist = true;
-                }
-                catch (ArgumentNullException) { }
+                var exist = prop != null;
 
                 return exist;
             }
             ).Select(property =>
             {
-                var prop = elementType.GetProperty(property);
+                var prop = elementType.GetProperties().First(propertyOfEntity => propertyOfEntity.Name.ToLower() == property.ToLower());
 
                 return prop;
             }
@@ -192,30 +182,34 @@ namespace DataAccess.Extensions
         {
             IQueryable<TEntity> elementsOrdered = source;
 
-            if (!(orderConfig is null) && orderConfig.Properties.Length != 0)
+            if (!(orderConfig is null) && orderConfig.Properties.Any())
             {
                 try
                 {
-
                     string command = orderConfig.OrderBy == ORDER.DESC ? "OrderByDescending" : "OrderBy";
                     var type = typeof(TEntity);
-                    var property = type.GetProperty(orderConfig.Properties[0]);
-                    var parameter = Expression.Parameter(type, "p");
-                    var propertyAccess = Expression.MakeMemberAccess(parameter, property);
-                    var orderByExpression = Expression.Lambda(propertyAccess, parameter);
-                    var resultExpression = Expression.Call(typeof(Queryable), command, new Type[] { type, property.PropertyType },
-                                                  source.Expression, Expression.Quote(orderByExpression));
+                    var firstPropertyOrderBy = orderConfig.Properties[0];
+                    var property = type.GetProperties().FirstOrDefault(propertyOfEntity => propertyOfEntity.Name.ToLower() == firstPropertyOrderBy);
 
-                    elementsOrdered = source.Provider.CreateQuery<TEntity>(resultExpression);
-
-                    string thenCommand = "ThenBy";
-                    foreach (var thenByProperty in orderConfig.Properties)
+                    if (property != null)
                     {
-                        var thenProperty = type.GetProperty(thenByProperty);
-                        var thenPropertyAccess = Expression.MakeMemberAccess(parameter, thenProperty);
-                        var thenByExpression = Expression.Lambda(thenPropertyAccess, parameter);
-                        resultExpression = Expression.Call(typeof(Queryable), thenCommand, new Type[] { type, thenProperty.PropertyType },
-                                                  elementsOrdered.Expression, Expression.Quote(thenByExpression));
+                        var parameter = Expression.Parameter(type, "p");
+                        var propertyAccess = Expression.MakeMemberAccess(parameter, property);
+                        var orderByExpression = Expression.Lambda(propertyAccess, parameter);
+                        var resultExpression = Expression.Call(typeof(Queryable), command, new Type[] { type, property.PropertyType },
+                                                      source.Expression, Expression.Quote(orderByExpression));
+
+                        elementsOrdered = source.Provider.CreateQuery<TEntity>(resultExpression);
+
+                        string thenCommand = "ThenBy";
+                        foreach (var thenByProperty in orderConfig.Properties.Where((prop, index) => index != 0))
+                        {
+                            var thenProperty = type.GetProperties().FirstOrDefault(propertyOfEntity => propertyOfEntity.Name.ToLower() == thenByProperty);
+                            var thenPropertyAccess = Expression.MakeMemberAccess(parameter, thenProperty);
+                            var thenByExpression = Expression.Lambda(thenPropertyAccess, parameter);
+                            resultExpression = Expression.Call(typeof(Queryable), thenCommand, new Type[] { type, thenProperty.PropertyType },
+                                                      elementsOrdered.Expression, Expression.Quote(thenByExpression));
+                        }
                     }
                 }
                 catch (ArgumentNullException) { }
