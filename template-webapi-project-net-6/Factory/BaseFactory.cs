@@ -22,7 +22,5 @@ public class BaseFactory
         this._services.InjectDataAccess(this._configuration.GetConnectionString("MyDataBaseConnectionString"));
         this._services.InjectSession();
         this._services.InjectValidators();
-
-        this._services.AddGraphQLServer().AddQueryType<AdapterGraphQlQuery>().AddProjections().AddFiltering().AddSorting();
     }
 }

@@ -6,6 +6,8 @@ using System.Reflection;
 using System.Threading.Tasks;
 using DataAccess.Extensions;
 using DataAccessInterface;
+using DataAccessInterface.Collections;
+using DataAccessInterface.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 
@@ -83,9 +85,23 @@ public class EfCoreRepository<T> : IRepository<T> where T : class
         Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
         Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
     {
-        var elements = this._elements.AsNoTracking().NullableWhere(condition).NullableInclude(include).NullableOrderBy(orderBy).NullableSelect(selector).ToList();
+        var elements = this._elements.AsNoTracking().NullableWhere(condition).NullableInclude(include).NullableOrderBy(orderBy).NullableSelect(selector);
 
         return elements;
+    }
+
+    
+
+    public PagedList<T> GetPagedCollection(
+        Expression<Func<T, bool>> condition = null, 
+        string[] selector = null, 
+        OrderConfig orderBy = null, 
+        int pageIndex = 0, 
+        int pageSize = 0)
+    {
+        var paginatedElements = this._elements.AsNoTracking().NullableWhere(condition).OrderByClient(orderBy).SelectByClient(selector).ToPagedList(pageIndex, pageSize);
+
+        return paginatedElements;
     }
 
     public void Delete(T entity)

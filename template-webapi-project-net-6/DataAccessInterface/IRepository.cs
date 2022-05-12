@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using DataAccessInterface.Collections;
+using DataAccessInterface.Entities;
 using Microsoft.EntityFrameworkCore.Query;
 
 namespace DataAccessInterface
@@ -13,9 +15,9 @@ namespace DataAccessInterface
         bool Exist(Expression<Func<T, bool>> condition);
 
         T Get(
-            Expression<Func<T, bool>> condition, 
+            Expression<Func<T, bool>> condition,
             Expression<Func<T, T>> selector = null,
-            Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null, 
+            Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null,
             bool track = false);
 
         IEnumerable<T> GetCollection(
@@ -23,6 +25,13 @@ namespace DataAccessInterface
             Expression<Func<T, T>> selector = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null);
+
+        PagedList<T> GetPagedCollection(
+        Expression<Func<T, bool>> condition = null,
+        string[] selector = null,
+        OrderConfig orderBy = null,
+        int pageIndex = 0,
+        int pageSize = 0);
 
         void InsertAndSave(T entity);
         void SaveChanges();
