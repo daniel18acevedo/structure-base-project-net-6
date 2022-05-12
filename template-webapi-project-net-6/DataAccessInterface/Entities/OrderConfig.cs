@@ -1,6 +1,6 @@
 namespace DataAccessInterface.Entities;
 public class OrderConfig
 {
-    public ORDER orderBy { get; set; }
-    public string[] properties { get; set; }
+    public ORDER OrderBy { get; set; }
+    public string[] Properties { get; set; }
 }

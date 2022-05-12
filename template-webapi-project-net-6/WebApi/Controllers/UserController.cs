@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BusinessLogic;
 using BusinessLogicAdapter;
 using Microsoft.AspNetCore.Mvc;
+using Model;
 using Model.Read;
 using Model.Write;
 using WebApi.Filters;
@@ -23,9 +25,9 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get([FromQuery]PaginationFilter paginationFilter)
         {
-            var users = this._userLogicAdapter.GetCollection<UserBasicModel>();
+            var users = this._userLogicAdapter.GetCollection<UserBasicModel>(paginationFilter);
 
             return Ok(users);
         }

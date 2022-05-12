@@ -143,14 +143,14 @@ namespace DataAccess.Extensions
         {
             IQueryable<TEntity> elementsOrdered = source;
 
-            if (!(orderConfig is null) && orderConfig.properties.Length != 0)
+            if (!(orderConfig is null) && orderConfig.Properties.Length != 0)
             {
                 try
                 {
 
-                    string command = orderConfig.orderBy == ORDER.DESC ? "OrderByDescending" : "OrderBy";
+                    string command = orderConfig.OrderBy == ORDER.DESC ? "OrderByDescending" : "OrderBy";
                     var type = typeof(TEntity);
-                    var property = type.GetProperty(orderConfig.properties[0]);
+                    var property = type.GetProperty(orderConfig.Properties[0]);
                     var parameter = Expression.Parameter(type, "p");
                     var propertyAccess = Expression.MakeMemberAccess(parameter, property);
                     var orderByExpression = Expression.Lambda(propertyAccess, parameter);
@@ -160,7 +160,7 @@ namespace DataAccess.Extensions
                     elementsOrdered = source.Provider.CreateQuery<TEntity>(resultExpression);
 
                     string thenCommand = "ThenBy";
-                    foreach (var thenByProperty in orderConfig.properties)
+                    foreach (var thenByProperty in orderConfig.Properties)
                     {
                         var thenProperty = type.GetProperty(thenByProperty);
                         var thenPropertyAccess = Expression.MakeMemberAccess(parameter, thenProperty);

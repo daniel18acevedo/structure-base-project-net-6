@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using BusinessLogic;
 using BusinessLogicValidatorInterface;
+using DataAccessInterface.Collections;
+using Model;
 
 namespace BusinessLogicAdapter;
 public abstract class BaseLogicAdapter<TModel, TEntity>
@@ -22,18 +24,18 @@ where TEntity : class
         this._modelBusinessValidator = modelBusinessValidator;
     }
 
-    public IEnumerable<TBasicModel> GetCollection<TBasicModel>()
+    public PagedList<dynamic> GetCollection<TBasicModel>(PaginationFilter paginationFilter)
     {
-        var elements = this.GetElementsFromLogic();
+        var elements = this.GetElementsFromLogic(paginationFilter);
 
         var elementsConverted = this._mapper.Map<IEnumerable<TBasicModel>>(elements);
 
         return elementsConverted;
     }
 
-    protected virtual IEnumerable<TEntity> GetElementsFromLogic()
+    protected virtual PagedList<TEntity> GetElementsFromLogic(PaginationFilter paginationFilter)
     {
-        var elements = this._entityLogic.GetCollection();
+        var elements = this._entityLogic.GetCollection(paginationFilter);
 
         return elements;
     }
