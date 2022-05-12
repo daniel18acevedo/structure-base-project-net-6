@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Model;
 using Model.Read;
 using Model.Write;
+using Newtonsoft.Json;
 using WebApi.Filters;
 
 [assembly: ApiController]
@@ -25,7 +26,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get([FromQuery]PaginationFilter paginationFilter)
+        public IActionResult Get([FromQuery] PaginationFilter paginationFilter)
         {
             var users = this._userLogicAdapter.GetCollection(paginationFilter);
 
@@ -36,7 +37,7 @@ namespace WebApi.Controllers
         public IActionResult Create(UserModel user)
         {
             var userCreated = this._userLogicAdapter.Create<UserDetailInfoModel>(user);
-            
+
             return CreatedAtRoute("GetUserById", new { userId = userCreated.Id }, userCreated);
         }
     }

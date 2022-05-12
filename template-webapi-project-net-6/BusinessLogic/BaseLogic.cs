@@ -22,7 +22,7 @@ where TEntity : class
         this._entityBusinessValidator = entityBusinessValidator;
     }
 
-    public PagedList<TEntity> GetCollection(PaginationFilter paginationFilter)
+    public PagedList<dynamic> GetCollection(PaginationFilter paginationFilter)
     {
         var entities = this._entityRepository.GetPagedCollection(
             orderBy: new OrderConfig

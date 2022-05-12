@@ -35,9 +35,7 @@ where TEntity : class
     {
         var elements = this._entityLogic.GetCollection(paginationFilter);
 
-        var elementsConverted = this._mapper.Map(elements);
-
-        return elementsConverted;
+        return elements;
     }
 
     public TDetailModel Create<TDetailModel>(TModel model)

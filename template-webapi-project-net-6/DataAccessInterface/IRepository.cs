@@ -26,7 +26,7 @@ namespace DataAccessInterface
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null);
 
-        PagedList<T> GetPagedCollection(
+        PagedList<dynamic> GetPagedCollection(
         Expression<Func<T, bool>> condition = null,
         string[] selector = null,
         OrderConfig orderBy = null,

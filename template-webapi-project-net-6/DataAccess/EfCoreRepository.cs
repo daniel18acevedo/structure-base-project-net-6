@@ -92,14 +92,14 @@ public class EfCoreRepository<T> : IRepository<T> where T : class
 
     
 
-    public PagedList<T> GetPagedCollection(
+    public PagedList<dynamic> GetPagedCollection(
         Expression<Func<T, bool>> condition = null, 
         string[] selector = null, 
         OrderConfig orderBy = null, 
         int pageIndex = 0, 
         int pageSize = 0)
     {
-        var paginatedElements = this._elements.AsNoTracking().NullableWhere(condition).OrderByClient(orderBy).SelectByClient(selector).ToPagedList(pageIndex, pageSize);
+        var paginatedElements = this._elements.AsNoTracking().NullableWhere(condition).OrderByClient(orderBy).SelectByClientDynamic(selector).ToPagedList(pageIndex, pageSize);
 
         return paginatedElements;
     }
