@@ -23,98 +23,98 @@ public class EfCoreRepository<T> : IRepository<T> where T : class
         this._elements = context.Set<T>();
     }
 
-    public void Attach(T entity)
+    public async Task Attach(T entity)
     {
         this._context.Attach(entity);
     }
 
-    public bool Exist(Expression<Func<T, bool>> condition)
+    public async Task<bool> ExistAsync(Expression<Func<T, bool>> condition)
     {
-        bool existEntity = this._elements.AsNoTracking().Any(condition);
+        bool existEntity = await this._elements.AsNoTracking().AnyAsync(condition);
 
         return existEntity;
     }
 
-    public T Get(
+    public async Task<T> GetAsync(
         Expression<Func<T, bool>> condition,
         Expression<Func<T, T>> selector = null,
         Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null,
         bool track = false)
     {
-        var entity = this._elements.TrackElements(track).Where(condition).NullableInclude(include).NullableSelect(selector).First();
+        var entity = await this._elements.TrackElements(track).Where(condition).NullableInclude(include).NullableSelect(selector).FirstAsync();
 
         return entity;
     }
 
-    public void InsertAndSave(T entity)
+    public async Task InsertAndSaveAsync(T entity)
     {
-        this._elements.Add(entity);
-        this.SaveChanges();
+        await this._elements.AddAsync(entity);
+        await this.SaveChangesAsync();
     }
 
-    public void Insert(T entity)
+    public async Task InsertAsync(T entity)
     {
-        this._elements.Add(entity);
+        await this._elements.AddAsync(entity);
     }
 
-    public void Update(T entity)
+    public async Task UpdateAsync(T entity)
     {
         this._context.Update(entity);
     }
 
-    public void UpdateAndSave(T entity)
+    public async Task UpdateAndSaveAsync(T entity)
     {
-        this._context.Entry<T>(entity).State = EntityState.Modified;
+        await this.UpdateAsync(entity);
 
-        this.SaveChanges();
+        await this.SaveChangesAsync();
     }
 
-    public void Load<TProperty>(T entity, Expression<Func<T, TProperty>> propertyExpression) where TProperty : class
+    public async Task LoadAsync<TProperty>(T entity, Expression<Func<T, TProperty>> propertyExpression) where TProperty : class
     {
-        this._context.Entry(entity).Reference(propertyExpression).Load();
+        await this._context.Entry(entity).Reference(propertyExpression).LoadAsync();
     }
 
-    public void SaveChanges()
+    public async Task SaveChangesAsync()
     {
-        this._context.SaveChanges();
+        await this._context.SaveChangesAsync();
     }
 
-    public IEnumerable<T> GetCollection(
+    public async Task<IEnumerable<T>> GetCollectionAsync(
         Expression<Func<T, bool>> condition = null,
         Expression<Func<T, T>> selector = null,
         Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
         Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
     {
-        var elements = this._elements.AsNoTracking().NullableWhere(condition).NullableInclude(include).NullableOrderBy(orderBy).NullableSelect(selector);
+        var elements = await this._elements.AsNoTracking().NullableWhere(condition).NullableInclude(include).NullableOrderBy(orderBy).NullableSelect(selector).ToListAsync();
 
         return elements;
     }
 
     
 
-    public PagedList<dynamic> GetPagedCollection(
+    public async Task<PagedList<dynamic>> GetPagedCollectionAsync(
         Expression<Func<T, bool>> condition = null, 
         string[] selector = null, 
         OrderConfig orderBy = null, 
         int pageIndex = 0, 
         int pageSize = 0)
     {
-        var paginatedElements = this._elements.AsNoTracking().NullableWhere(condition).OrderByClient(orderBy).SelectByClientDynamic(selector).ToPagedList(pageIndex, pageSize);
+        var paginatedElements = await this._elements.AsNoTracking().NullableWhere(condition).OrderByClient(orderBy).SelectByClientDynamic(selector).ToPagedListAsync(pageIndex, pageSize);
 
         return paginatedElements;
     }
 
-    public void Delete(T entity)
+    public async Task DeleteAsync(T entity)
     {
         this._context.Remove(entity);
     }
 
-    public void DeleteByIdAndSave(object id)
+    public async Task DeleteByIdAndSaveAsync(object id)
     {
-        this.DeleteByIdsAndSave(new List<object> { id });
+        this.DeleteByIdsAndSaveAsync(new List<object> { id });
     }
 
-    public void DeleteByIdsAndSave(IEnumerable<object> ids)
+    public async Task DeleteByIdsAndSaveAsync(IEnumerable<object> ids)
     {
         var entities = new List<T>();
 
@@ -141,6 +141,6 @@ public class EfCoreRepository<T> : IRepository<T> where T : class
         }
 
         this._context.RemoveRange(entities);
-        this._context.SaveChanges();
+        await this._context.SaveChangesAsync();
     }
 }

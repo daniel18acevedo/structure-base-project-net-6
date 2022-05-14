@@ -7,9 +7,9 @@ namespace SessionInterface
 {
     public interface ISessionService
     {
-        bool IsValidAuthorizationHeaderFormat(string authorizationHeader);
+        Task<bool> IsValidAuthorizationHeaderFormat(string authorizationHeader);
 
-        bool AuthenticateAndSaveUser(string authorizationHeader);
+        Task<bool> AuthenticateAndSaveUser(string authorizationHeader);
 
         UserLogged GetUserLogged();
     }

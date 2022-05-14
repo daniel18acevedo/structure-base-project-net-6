@@ -11,35 +11,35 @@ namespace DataAccessInterface
 {
     public interface IRepository<T> where T : class
     {
-        void Attach(T entity);
-        bool Exist(Expression<Func<T, bool>> condition);
+        Task Attach(T entity);
+        Task<bool> ExistAsync(Expression<Func<T, bool>> condition);
 
-        T Get(
+        Task<T> GetAsync(
             Expression<Func<T, bool>> condition,
             Expression<Func<T, T>> selector = null,
             Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null,
             bool track = false);
 
-        IEnumerable<T> GetCollection(
+        Task<IEnumerable<T>> GetCollectionAsync(
             Expression<Func<T, bool>> condition = null,
             Expression<Func<T, T>> selector = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null);
 
-        PagedList<dynamic> GetPagedCollection(
+        Task<PagedList<dynamic>> GetPagedCollectionAsync(
         Expression<Func<T, bool>> condition = null,
         string[] selector = null,
         OrderConfig orderBy = null,
         int pageIndex = 0,
         int pageSize = 0);
 
-        void InsertAndSave(T entity);
-        void SaveChanges();
-        void Update(T entity);
-        void UpdateAndSave(T entity);
-        void Load<TProperty>(T entity, Expression<Func<T, TProperty>> propertyExpression) where TProperty : class;
-        void Delete(T entity);
-        void DeleteByIdsAndSave(IEnumerable<object> ids);
-        void DeleteByIdAndSave(object id);
+        Task InsertAndSaveAsync(T entity);
+        Task SaveChangesAsync();
+        Task UpdateAsync(T entity);
+        Task UpdateAndSaveAsync(T entity);
+        Task LoadAsync<TProperty>(T entity, Expression<Func<T, TProperty>> propertyExpression) where TProperty : class;
+        Task DeleteAsync(T entity);
+        Task DeleteByIdsAndSaveAsync(IEnumerable<object> ids);
+        Task DeleteByIdAndSaveAsync(object id);
     }
 }

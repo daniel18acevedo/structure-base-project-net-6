@@ -10,7 +10,7 @@ namespace Session
     {
         private readonly UserLogged _userLogged;
 
-        public bool AuthenticateAndSaveUser(string authorizationHeader)
+        public async Task<bool> AuthenticateAndSaveUser(string authorizationHeader)
         {
             throw new NotImplementedException();
         }
@@ -20,7 +20,7 @@ namespace Session
             return this._userLogged;
         }
 
-        public bool IsValidAuthorizationHeaderFormat(string authorizationHeader)
+        public async Task<bool> IsValidAuthorizationHeaderFormat(string authorizationHeader)
         {
             throw new NotImplementedException();
         }

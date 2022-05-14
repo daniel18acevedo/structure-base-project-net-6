@@ -9,9 +9,9 @@ using SessionInterface;
 
 namespace WebApi.Filters
 {
-    internal class AuthenticationFilter : BaseFilter, IAuthorizationFilter
+    internal class AuthenticationFilter : BaseFilter, IAsyncAuthorizationFilter
     {
-        public void OnAuthorization(AuthorizationFilterContext context)
+        public async Task OnAuthorizationAsync(AuthorizationFilterContext context)
         {
             string authorizationHeader = context.HttpContext.Request.Headers["Authorization"];
 
@@ -29,7 +29,7 @@ namespace WebApi.Filters
             else
             {
                 var sessionLogic = base.GetService<ISessionService>(context);
-                var isValidAuthorization = sessionLogic.IsValidAuthorizationHeaderFormat(authorizationHeader);
+                var isValidAuthorization = await sessionLogic.IsValidAuthorizationHeaderFormat(authorizationHeader);
 
                 if (!isValidAuthorization)
                 {
@@ -41,7 +41,7 @@ namespace WebApi.Filters
                 }
                 else
                 {
-                    var isValidAuthentication = sessionLogic.AuthenticateAndSaveUser(authorizationHeader);
+                    var isValidAuthentication = await sessionLogic.AuthenticateAndSaveUser(authorizationHeader);
 
                     if (!isValidAuthentication)
                     {

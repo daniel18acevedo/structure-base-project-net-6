@@ -6,20 +6,20 @@ namespace BusinessLogicValidator;
 //https://docs.fluentvalidation.net/en/latest/
 public class BaseValidator<TEntity> : AbstractValidator<TEntity>, IBusinessValidator<TEntity> where TEntity : class
 {
-    public void CreationValidation(TEntity entity)
+    public async Task CreationValidationAsync(TEntity entity)
     {
-        this.Validate(entity);
+        await this.Validate(entity);
 
-        this.IncludeValidation(entity);
+        await this.IncludeValidation(entity);
 
-        this.BusinessValidation(entity);
+        await this.BusinessValidation(entity);
     }
 
-    private void Validate(TEntity entity)
+    private async Task Validate(TEntity entity)
     {
         base.EnsureInstanceNotNull(entity);
 
-        var result = base.Validate(entity);
+        var result = await base.ValidateAsync(entity);
         var errorFormatted = FormatErrors(result.Errors);
 
         if (!result.IsValid) throw new ArgumentException(errorFormatted);
@@ -44,9 +44,9 @@ public class BaseValidator<TEntity> : AbstractValidator<TEntity>, IBusinessValid
         return errorFormatted;
     }
 
-    protected virtual void BusinessValidation(TEntity entity) { }
+    protected virtual Task BusinessValidation(TEntity entity) { return Task.CompletedTask; }
 
-    protected virtual void IncludeValidation(TEntity entity) { }
+    protected virtual Task IncludeValidation(TEntity entity) { return Task.CompletedTask; }
 
     public void ValidateIdentifier(int id)
     {

@@ -24,36 +24,36 @@ where TEntity : class
         this._modelBusinessValidator = modelBusinessValidator;
     }
 
-    public PagedList<dynamic> GetCollection(PaginationFilter paginationFilter)
+    public async Task<PagedList<dynamic>> GetCollectionAsync(PaginationFilter paginationFilter)
     {
-        var elements = this.GetElementsFromLogic(paginationFilter);
+        var elements = await this.GetElementsFromLogicAsync(paginationFilter);
 
         return elements;
     }
 
-    protected virtual PagedList<dynamic> GetElementsFromLogic(PaginationFilter paginationFilter)
+    protected virtual async Task<PagedList<dynamic>> GetElementsFromLogicAsync(PaginationFilter paginationFilter)
     {
-        var elements = this._entityLogic.GetCollection(paginationFilter);
+        var elements = await this._entityLogic.GetCollectionAsync(paginationFilter);
 
         return elements;
     }
 
-    public TDetailModel Create<TDetailModel>(TModel model)
+    public async Task<TDetailModel> CreateAsync<TDetailModel>(TModel model)
     {
-        this._modelBusinessValidator.CreationValidation(model);
+        await this._modelBusinessValidator.CreationValidationAsync(model);
         
         var entity = this._mapper.Map<TEntity>(model);
 
-        var entityCreated = this.CreateEntity(entity);
+        var entityCreated = await this.CreateEntityAsync(entity);
 
         var entityConverted = this._mapper.Map<TDetailModel>(entityCreated);
 
         return entityConverted;
     }
 
-    protected virtual TEntity CreateEntity(TEntity entity)
+    protected virtual async Task<TEntity> CreateEntityAsync(TEntity entity)
     {
-        var entityCreated = this._entityLogic.Add(entity);
+        var entityCreated = await this._entityLogic.AddAsync(entity);
 
         return entityCreated;
     }

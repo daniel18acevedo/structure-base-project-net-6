@@ -18,6 +18,9 @@ builder.Services.AddControllers(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
+
 var serviceFactory = new BaseFactory(builder.Services, builder.Configuration);
 serviceFactory.InjectDependencies();
 

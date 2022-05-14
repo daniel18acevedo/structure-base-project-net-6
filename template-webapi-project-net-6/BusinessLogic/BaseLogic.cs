@@ -22,9 +22,9 @@ where TEntity : class
         this._entityBusinessValidator = entityBusinessValidator;
     }
 
-    public PagedList<dynamic> GetCollection(PaginationFilter paginationFilter)
+    public async Task<PagedList<dynamic>> GetCollectionAsync(PaginationFilter paginationFilter)
     {
-        var entities = this._entityRepository.GetPagedCollection(
+        var entities = await this._entityRepository.GetPagedCollectionAsync(
             orderBy: new OrderConfig
             {
                 OrderBy = paginationFilter.GetOrderType(),
@@ -37,11 +37,11 @@ where TEntity : class
         return entities;
     }
 
-    public TEntity Add(TEntity entity)
+    public async Task<TEntity> AddAsync(TEntity entity)
     {
-        this._entityBusinessValidator.CreationValidation(entity);
+        await this._entityBusinessValidator.CreationValidationAsync(entity);
 
-        this._entityRepository.InsertAndSave(entity);
+        await this._entityRepository.InsertAndSaveAsync(entity);
 
         return entity;
     }

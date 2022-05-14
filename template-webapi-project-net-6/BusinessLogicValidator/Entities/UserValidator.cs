@@ -29,9 +29,9 @@ public class UserValidator : BaseValidator<User>
     }
 
 
-    protected override void BusinessValidation(User user)
+    protected override async Task BusinessValidation(User user)
     {
-        var existUserWithThatEmail = this._userRepository.Exist(userSaved => userSaved.Email == user.Email);
+        var existUserWithThatEmail = await this._userRepository.ExistAsync(userSaved => userSaved.Email == user.Email);
 
         if(existUserWithThatEmail)
         {

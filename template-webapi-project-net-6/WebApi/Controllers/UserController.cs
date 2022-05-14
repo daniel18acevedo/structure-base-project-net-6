@@ -26,17 +26,17 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get([FromQuery] PaginationFilter paginationFilter)
+        public async Task<IActionResult> Get([FromQuery] PaginationFilter paginationFilter)
         {
-            var users = this._userLogicAdapter.GetCollection(paginationFilter);
+            var users = await this._userLogicAdapter.GetCollectionAsync(paginationFilter);
 
             return Ok(users);
         }
 
         [HttpPost]
-        public IActionResult Create(UserModel user)
+        public async Task<IActionResult> Create(UserModel user)
         {
-            var userCreated = this._userLogicAdapter.Create<UserDetailInfoModel>(user);
+            var userCreated = await this._userLogicAdapter.CreateAsync<UserDetailInfoModel>(user);
 
             return CreatedAtRoute("GetUserById", new { userId = userCreated.Id }, userCreated);
         }
