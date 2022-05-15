@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BusinessLogic;
+using BusinessLogicFilter;
 using BusinessLogicMapperInterface;
 using BusinessLogicValidatorInterface;
 using DataAccessInterface.Collections;
@@ -24,14 +25,14 @@ where TEntity : class
         this._modelBusinessValidator = modelBusinessValidator;
     }
 
-    public async Task<PagedList<dynamic>> GetCollectionAsync(PaginationFilter paginationFilter)
+    public async Task<PagedList<dynamic>> GetCollectionAsync(PaginationFilter<TEntity> paginationFilter)
     {
         var elements = await this.GetElementsFromLogicAsync(paginationFilter);
 
         return elements;
     }
 
-    protected virtual async Task<PagedList<dynamic>> GetElementsFromLogicAsync(PaginationFilter paginationFilter)
+    protected virtual async Task<PagedList<dynamic>> GetElementsFromLogicAsync(PaginationFilter<TEntity> paginationFilter)
     {
         var elements = await this._entityLogic.GetCollectionAsync(paginationFilter);
 

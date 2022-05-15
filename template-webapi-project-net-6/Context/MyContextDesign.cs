@@ -6,8 +6,10 @@ public class MyContextDesign : IDesignTimeDbContextFactory<MyContext>
 {
     public MyContext CreateDbContext(string[] args)
     {
+        var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
+
         var builderOptions = new DbContextOptionsBuilder<MyContext>();
-        builderOptions.UseSqlServer("Server=localhost;Database=MyDataBase;Trusted_Connection=True;MultipleActiveResultSets=True;");
+        builderOptions.UseSqlServer(connectionString);
 
         var myContext = new MyContext(builderOptions.Options);
 

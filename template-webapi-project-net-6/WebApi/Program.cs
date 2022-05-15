@@ -19,7 +19,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-
+DotNetEnv.Env.Load("./Environment/.env");
 
 var serviceFactory = new BaseFactory(builder.Services, builder.Configuration);
 serviceFactory.InjectDependencies();

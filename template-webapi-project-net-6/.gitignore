@@ -19,6 +19,7 @@ mono_crash.*
 /bin
 /obj
 /out
+/.env
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

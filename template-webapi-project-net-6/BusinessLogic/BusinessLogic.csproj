@@ -4,6 +4,8 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\DataAccessInterface\DataAccessInterface.csproj" />
     <ProjectReference Include="..\BusinessLogicValidatorInterface\BusinessLogicValidatorInterface.csproj" />
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\BusinessLogicFilter\BusinessLogicFilter.csproj" />
   </ItemGroup>
 
   <ItemGroup>

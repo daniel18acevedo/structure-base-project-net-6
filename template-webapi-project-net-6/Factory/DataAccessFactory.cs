@@ -14,6 +14,8 @@ internal static class DataAccessFactory
 {
     public static void InjectDataAccess(this IServiceCollection services, string connectionString)
     {
+        connectionString = Environment.GetEnvironmentVariable(connectionString);
+        
         services.AddDbContext<DbContext, MyContext>(options =>
         {
             options.UseSqlServer(connectionString);

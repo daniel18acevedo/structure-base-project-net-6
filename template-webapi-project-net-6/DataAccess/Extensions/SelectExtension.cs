@@ -15,6 +15,11 @@ public static class SelectExtension
     {
         var elementType = typeof(TEntity);
 
+        if (!properties.Any())
+        {
+            properties = elementType.GetProperties().Select(property => property.Name).ToArray();
+        }
+
         // input parameter "o"
         var parameter = Expression.Parameter(elementType, "o");
 
@@ -45,17 +50,14 @@ public static class SelectExtension
 
         IQueryable<TEntity> elementsToReturn = null;
 
-        if (bindings.Any())
-        {
-            // initialization "new Data { Field1 = o.Field1, Field2 = o.Field2 }"
-            var elementInit = Expression.MemberInit(elementCreated, bindings);
+        // initialization "new Data { Field1 = o.Field1, Field2 = o.Field2 }"
+        var elementInit = Expression.MemberInit(elementCreated, bindings);
 
-            // expression "o => new Data { Field1 = o.Field1, Field2 = o.Field2 }"
-            var lambda = Expression.Lambda<Func<TEntity, TEntity>>(elementInit, parameter);
+        // expression "o => new Data { Field1 = o.Field1, Field2 = o.Field2 }"
+        var lambda = Expression.Lambda<Func<TEntity, TEntity>>(elementInit, parameter);
 
-            // compile to Func<Data, Data>
-            elementsToReturn = source.Select(lambda);
-        }
+        // compile to Func<Data, Data>
+        elementsToReturn = source.Select(lambda);
 
         return elementsToReturn;
     }
@@ -67,7 +69,7 @@ public static class SelectExtension
     {
 
         var elementType = typeof(TEntity);
-        
+
         if (!properties.Any())
         {
             properties = elementType.GetProperties().Select(property => property.Name).ToArray();

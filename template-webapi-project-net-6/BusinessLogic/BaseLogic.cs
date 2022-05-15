@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BusinessLogicFilter;
 using BusinessLogicValidatorInterface;
 using DataAccessInterface;
 using DataAccessInterface.Collections;
@@ -22,9 +23,10 @@ where TEntity : class
         this._entityBusinessValidator = entityBusinessValidator;
     }
 
-    public async Task<PagedList<dynamic>> GetCollectionAsync(PaginationFilter paginationFilter)
+    public async Task<PagedList<dynamic>> GetCollectionAsync(PaginationFilter<TEntity> paginationFilter)
     {
         var entities = await this._entityRepository.GetPagedCollectionAsync(
+            condition: paginationFilter.Filter(),
             orderBy: new OrderConfig
             {
                 OrderBy = paginationFilter.GetOrderType(),

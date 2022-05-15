@@ -7,20 +7,30 @@ public static class PagedExtension
 {
      public static async Task<PagedList<T>> ToPagedListAsync<T>(this IQueryable<T> sourceElements, int pageIndex, int pageSize) where T : class
         {
-            pageIndex = pageIndex <= 0 ? 1 : pageIndex;
-            pageSize = pageSize <= 0 ? 20 : pageSize;
+            var elementesPaged = sourceElements;
+            var totalSize = sourceElements.Count();
+            var count = totalSize;
+            var totalPages = 1;
+            var page = 1;
+            var sizeOfPage = totalSize;
 
-            int totalSize = await sourceElements.CountAsync();
-            int count = (pageIndex - 1) * pageSize;
-            IEnumerable<T> elementesPaged = await sourceElements.Skip(count).Take(pageSize).ToListAsync();
+            if (pageIndex != 0 && pageSize != 0)
+            {
+                page = pageIndex < 0 ? 1 : pageIndex;
+                sizeOfPage = pageSize < 0 ? 20 : pageSize;
+
+                count = (pageIndex - 1) * pageSize;
+                elementesPaged = elementesPaged.Skip(count).Take(pageSize);
+                totalPages = (int)Math.Ceiling(totalSize / (double)pageSize);
+            }
 
             PagedList<T> pagedList = new PagedList<T>
             {
-                PageIndex = pageIndex,
-                PageSize = pageSize,
+                PageIndex = page,
+                PageSize = sizeOfPage,
                 TotalCount = totalSize,
-                Elements = elementesPaged,
-                TotalPages = (int)Math.Ceiling(totalSize / (double)pageSize)
+                Elements = await elementesPaged.ToListAsync(),
+                TotalPages = totalPages
             };
 
             return pagedList;

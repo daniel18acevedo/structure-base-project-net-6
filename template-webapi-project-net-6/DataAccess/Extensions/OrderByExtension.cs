@@ -14,7 +14,7 @@ public static class OrderByExtension
         {
             try
             {
-                string command = orderConfig.OrderBy == ORDER.DESC ? "OrderByDescending" : "OrderBy";
+                string command = orderConfig.OrderBy == Order.DESC ? "OrderByDescending" : "OrderBy";
                 var type = typeof(TEntity);
                 var firstPropertyOrderBy = orderConfig.Properties[0];
                 var property = type.GetProperties().FirstOrDefault(propertyOfEntity => propertyOfEntity.Name.ToLower() == firstPropertyOrderBy);

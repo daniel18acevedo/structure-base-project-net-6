@@ -6,6 +6,7 @@
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\BusinessLogicMapperInterface\BusinessLogicMapperInterface.csproj" />
+    <ProjectReference Include="..\BusinessLogicFilter\BusinessLogicFilter.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

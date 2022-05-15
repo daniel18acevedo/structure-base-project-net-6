@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BusinessLogic;
 using BusinessLogicAdapter;
+using BusinessLogicFilter;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 using Model.Read;
@@ -26,7 +26,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] PaginationFilter paginationFilter)
+        public async Task<IActionResult> Get([FromQuery] UserFilter paginationFilter)
         {
             var users = await this._userLogicAdapter.GetCollectionAsync(paginationFilter);
 
