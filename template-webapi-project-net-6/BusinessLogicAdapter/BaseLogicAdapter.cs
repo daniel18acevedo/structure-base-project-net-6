@@ -17,22 +17,46 @@ where TEntity : class
     protected readonly IMap _mapper;
     protected readonly IBusinessValidator<TModel> _modelBusinessValidator;
     protected readonly BaseLogic<TEntity> _entityLogic;
-
-    public BaseLogicAdapter(BaseLogic<TEntity> entityLogic, IMap mapper, IBusinessValidator<TModel> modelBusinessValidator)
+    protected readonly IBusinessValidator<PaginationFilter<object>> _paginationFilterValidator;
+    
+    public BaseLogicAdapter(
+        BaseLogic<TEntity> entityLogic,
+        IMap mapper,
+        IBusinessValidator<TModel> modelBusinessValidator,
+        IBusinessValidator<PaginationFilter<object>> paginationFilterValidator)
     {
         this._entityLogic = entityLogic;
         this._mapper = mapper;
         this._modelBusinessValidator = modelBusinessValidator;
+        this._paginationFilterValidator = paginationFilterValidator;
     }
 
     public async Task<PagedList<dynamic>> GetCollectionAsync<TBasicModel>(PaginationFilter<TEntity> paginationFilter)
     {
-        SetProperProperties<TBasicModel>(paginationFilter);
+        await this.CheckFilterValidation(paginationFilter);
+
+        await this.CheckFilterForEntityValidation(paginationFilter);
+
+        this.SetProperProperties<TBasicModel>(paginationFilter);
 
         var elements = await this.GetElementsFromLogicAsync(paginationFilter);
 
         return elements;
     }
+
+    private async Task CheckFilterValidation(PaginationFilter<TEntity> paginationFilter)
+    {
+        var paginationFilterObject = new PaginationFilter<object>
+        {
+            Count = paginationFilter.Count,
+            Page = paginationFilter.Page,
+            Order = paginationFilter.Order,
+        };
+
+        await this._paginationFilterValidator.CreationValidationAsync(paginationFilterObject);
+    }
+
+    protected virtual Task CheckFilterForEntityValidation(PaginationFilter<TEntity> paginationFilter) { return Task.CompletedTask; }
 
     private void SetProperProperties<TBasicModel>(PaginationFilter<TEntity> paginationFilter)
     {

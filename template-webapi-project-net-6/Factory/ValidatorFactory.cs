@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BusinessLogicFilter;
 using BusinessLogicValidator.Entities;
+using BusinessLogicValidator.Filter;
 using BusinessLogicValidator.Model;
 using BusinessLogicValidatorInterface;
 using Domain;
@@ -16,5 +18,7 @@ internal static class ValidatorFactory
     {
         services.AddTransient<IBusinessValidator<UserModel>, UserModelValidator>();
         services.AddTransient<IBusinessValidator<User>, UserValidator>();
+        services.AddTransient<IBusinessValidator<PaginationFilter<object>>, PaginationFilterValidator<object>>();
+        services.AddTransient<IBusinessValidator<UserFilter>, UserFilterValidator>();
     }
 }
