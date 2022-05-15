@@ -70,7 +70,7 @@ public static class SelectExtension
 
         var elementType = typeof(TEntity);
 
-        if (!properties.Any())
+        if (properties == null || !properties.Any())
         {
             properties = elementType.GetProperties().Select(property => property.Name).ToArray();
         }

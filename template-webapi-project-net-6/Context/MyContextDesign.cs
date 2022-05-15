@@ -6,6 +6,8 @@ public class MyContextDesign : IDesignTimeDbContextFactory<MyContext>
 {
     public MyContext CreateDbContext(string[] args)
     {
+        DotNetEnv.Env.Load("./Environment/.env");
+
         var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
         var builderOptions = new DbContextOptionsBuilder<MyContext>();

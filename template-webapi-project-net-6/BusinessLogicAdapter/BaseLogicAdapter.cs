@@ -25,11 +25,22 @@ where TEntity : class
         this._modelBusinessValidator = modelBusinessValidator;
     }
 
-    public async Task<PagedList<dynamic>> GetCollectionAsync(PaginationFilter<TEntity> paginationFilter)
+    public async Task<PagedList<dynamic>> GetCollectionAsync<TBasicModel>(PaginationFilter<TEntity> paginationFilter)
     {
+        SetProperProperties<TBasicModel>(paginationFilter);
+
         var elements = await this.GetElementsFromLogicAsync(paginationFilter);
 
         return elements;
+    }
+
+    private void SetProperProperties<TBasicModel>(PaginationFilter<TEntity> paginationFilter)
+    {
+        if (paginationFilter.Data == null || !paginationFilter.Data.Any())
+        {
+            var basicType = typeof(TBasicModel);
+            paginationFilter.Data = basicType.GetProperties().Select(property => property.Name).ToArray();
+        }
     }
 
     protected virtual async Task<PagedList<dynamic>> GetElementsFromLogicAsync(PaginationFilter<TEntity> paginationFilter)
@@ -42,7 +53,7 @@ where TEntity : class
     public async Task<TDetailModel> CreateAsync<TDetailModel>(TModel model)
     {
         await this._modelBusinessValidator.CreationValidationAsync(model);
-        
+
         var entity = this._mapper.Map<TEntity>(model);
 
         var entityCreated = await this.CreateEntityAsync(entity);

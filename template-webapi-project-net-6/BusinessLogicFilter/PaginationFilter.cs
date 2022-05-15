@@ -7,15 +7,15 @@ public class PaginationFilter<TEntity> where TEntity : class
     public int Count { get; set; }
     public int Page { get; set; }
     //asc desc
-    public string? Order { get; set; }
+    public string? Order { get; set; } = "ASC";
     //properties
-    public string[]? OrderBy { get; set; }
+    public string[]? OrderBy { get; set; } = new string[0];
     //info to return
-    public string[]? Data { get; set; }
+    public string[]? Data { get; set; } = new string[0];
 
-    public Order GetOrderType()
+    public ORDER GetOrderType()
     {
-        var order = (Order)Enum.Parse(typeof(Order), this.Order, true);
+        var order = (ORDER)Enum.Parse(typeof(ORDER), this.Order, true);
 
         return order;
     }

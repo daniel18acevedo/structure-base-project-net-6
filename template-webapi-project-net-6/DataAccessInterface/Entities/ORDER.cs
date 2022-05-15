@@ -1,5 +1,5 @@
 namespace DataAccessInterface.Entities;
-public enum Order
+public enum ORDER
 {
     ASC,
     DESC

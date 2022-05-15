@@ -28,7 +28,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery] UserFilter paginationFilter)
         {
-            var users = await this._userLogicAdapter.GetCollectionAsync(paginationFilter);
+            var users = await this._userLogicAdapter.GetCollectionAsync<UserBasicModel>(paginationFilter);
 
             return Ok(users);
         }
