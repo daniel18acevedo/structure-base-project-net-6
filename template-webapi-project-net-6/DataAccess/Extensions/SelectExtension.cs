@@ -32,13 +32,13 @@ public static class SelectExtension
         }
         ).Select(property =>
         {
-                // property "Field1"
+            // property "Field1"
             var originalProperty = elementType.GetProperty(property);
 
-                // original value "o.Field1"
+            // original value "o.Field1"
             var callingProperty = Expression.Property(parameter, originalProperty);
 
-                // set value "Field1 = o.Field1"
+            // set value "Field1 = o.Field1"
             return Expression.Bind(originalProperty, callingProperty);
         }
         );
@@ -65,7 +65,13 @@ public static class SelectExtension
     ///</summary>
     public static IQueryable<dynamic> SelectByClientDynamic<TEntity>(this IQueryable<TEntity> source, string[] properties)
     {
+
         var elementType = typeof(TEntity);
+        
+        if (!properties.Any())
+        {
+            properties = elementType.GetProperties().Select(property => property.Name).ToArray();
+        }
 
         var props = properties.Where(property =>
         {

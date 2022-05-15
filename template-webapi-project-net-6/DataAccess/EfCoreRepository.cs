@@ -25,7 +25,11 @@ public class EfCoreRepository<T> : IRepository<T> where T : class
 
     public async Task Attach(T entity)
     {
-        this._context.Attach(entity);
+        await Task.Run(() =>
+        {
+
+            this._context.Attach(entity);
+        });
     }
 
     public async Task<bool> ExistAsync(Expression<Func<T, bool>> condition)
@@ -59,7 +63,10 @@ public class EfCoreRepository<T> : IRepository<T> where T : class
 
     public async Task UpdateAsync(T entity)
     {
-        this._context.Update(entity);
+        await Task.Run(() =>
+        {
+            this._context.Update(entity);
+        });
     }
 
     public async Task UpdateAndSaveAsync(T entity)
@@ -90,13 +97,13 @@ public class EfCoreRepository<T> : IRepository<T> where T : class
         return elements;
     }
 
-    
+
 
     public async Task<PagedList<dynamic>> GetPagedCollectionAsync(
-        Expression<Func<T, bool>> condition = null, 
-        string[] selector = null, 
-        OrderConfig orderBy = null, 
-        int pageIndex = 0, 
+        Expression<Func<T, bool>> condition = null,
+        string[] selector = null,
+        OrderConfig orderBy = null,
+        int pageIndex = 0,
         int pageSize = 0)
     {
         var paginatedElements = await this._elements.AsNoTracking().NullableWhere(condition).OrderByClient(orderBy).SelectByClientDynamic(selector).ToPagedListAsync(pageIndex, pageSize);
@@ -106,12 +113,15 @@ public class EfCoreRepository<T> : IRepository<T> where T : class
 
     public async Task DeleteAsync(T entity)
     {
-        this._context.Remove(entity);
+        await Task.Run(() =>
+        {
+            this._context.Remove(entity);
+        });
     }
 
     public async Task DeleteByIdAndSaveAsync(object id)
     {
-        this.DeleteByIdsAndSaveAsync(new List<object> { id });
+        await this.DeleteByIdsAndSaveAsync(new List<object> { id });
     }
 
     public async Task DeleteByIdsAndSaveAsync(IEnumerable<object> ids)
