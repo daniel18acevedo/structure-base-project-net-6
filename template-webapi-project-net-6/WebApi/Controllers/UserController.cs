@@ -9,7 +9,6 @@ using Model;
 using Model.Read;
 using Model.Write;
 using Newtonsoft.Json;
-using WebApi.Filters;
 
 [assembly: ApiController]
 namespace WebApi.Controllers

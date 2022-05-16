@@ -6,11 +6,10 @@
     <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
     <ProjectReference Include="..\DataAccessInterface\DataAccessInterface.csproj" />
     <ProjectReference Include="..\Context\Context.csproj" />
-    <ProjectReference Include="..\Session\Session.csproj" />
-    <ProjectReference Include="..\SessionInterface\SessionInterface.csproj" />
     <ProjectReference Include="..\BusinessLogicValidator\BusinessLogicValidator.csproj" />
     <ProjectReference Include="..\BusinessLogicMapper\BusinessLogicMapper.csproj" />
     <ProjectReference Include="..\BusinessLogicMapperInterface\BusinessLogicMapperInterface.csproj" />
+    <ProjectReference Include="..\..\Session\SessionFactory\SessionFactory.csproj" />
   </ItemGroup>
 
   <ItemGroup>

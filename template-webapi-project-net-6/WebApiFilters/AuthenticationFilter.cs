@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using SessionInterface;
 
-namespace WebApi.Filters
+namespace WebApiFilters
 {
     internal class AuthenticationFilter : BaseFilter, IAsyncAuthorizationFilter
     {

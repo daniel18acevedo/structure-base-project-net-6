@@ -15,10 +15,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Factory\Factory.csproj" />
-    <ProjectReference Include="..\SessionInterface\SessionInterface.csproj" />
     <ProjectReference Include="..\Model\Model.csproj" />
     <ProjectReference Include="..\BusinessLogicAdapter\BusinessLogicAdapter.csproj" />
     <ProjectReference Include="..\BusinessLogicFilter\BusinessLogicFilter.csproj" />
+    <ProjectReference Include="..\WebApiFilters\WebApiFilters.csproj" />
   </ItemGroup>
 
 </Project>

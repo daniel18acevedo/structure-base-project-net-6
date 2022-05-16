@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataAccessInterface;
 using SessionInterface;
 
 namespace Session
@@ -9,6 +10,11 @@ namespace Session
     public class SessionService : ISessionService
     {
         private readonly UserLogged _userLogged;
+
+        public SessionService(IUnitOfWork unitOfWork)
+        {
+
+        }
 
         public async Task<bool> AuthenticateAndSaveUser(string authorizationHeader)
         {

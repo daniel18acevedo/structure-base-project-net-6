@@ -1,6 +1,6 @@
 using Factory;
 using Newtonsoft.Json;
-using WebApi.Filters;
+using WebApiFilters;
 
 var builder = WebApplication.CreateBuilder(args);
 

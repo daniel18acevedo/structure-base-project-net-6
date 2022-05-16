@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace WebApi.Filters
+namespace WebApiFilters
 {
     public class ExceptionFilter : IExceptionFilter
     {
