@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Session\SessionInterface\SessionInterface.csproj" />
+    <ProjectReference Include="..\..\Security\SecurityLogic\SecurityLogic.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityDomain", "SecurityDomain\SecurityDomain.csproj", "{E4498839-08AA-49E6-BBBC-D5E05F03DF97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityLogic", "SecurityLogic\SecurityLogic.csproj", "{F7E6841E-9C82-40C3-93E7-A02CAEA405AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityFactory", "SecurityFactory\SecurityFactory.csproj", "{F33B0792-AE8B-4E59-9E93-F5D97E8E16DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4498839-08AA-49E6-BBBC-D5E05F03DF97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4498839-08AA-49E6-BBBC-D5E05F03DF97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4498839-08AA-49E6-BBBC-D5E05F03DF97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4498839-08AA-49E6-BBBC-D5E05F03DF97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7E6841E-9C82-40C3-93E7-A02CAEA405AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E6841E-9C82-40C3-93E7-A02CAEA405AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E6841E-9C82-40C3-93E7-A02CAEA405AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E6841E-9C82-40C3-93E7-A02CAEA405AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33B0792-AE8B-4E59-9E93-F5D97E8E16DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33B0792-AE8B-4E59-9E93-F5D97E8E16DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33B0792-AE8B-4E59-9E93-F5D97E8E16DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33B0792-AE8B-4E59-9E93-F5D97E8E16DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

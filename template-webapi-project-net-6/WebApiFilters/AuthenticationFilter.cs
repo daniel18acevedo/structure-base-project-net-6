@@ -5,12 +5,22 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using SecurityLogic;
 using SessionInterface;
 
 namespace WebApiFilters
 {
     internal class AuthenticationFilter : BaseFilter, IAsyncAuthorizationFilter
     {
+        private readonly string[] rolesAllowed = new string[0];
+        private readonly string[] permissionsAllowed = new string[0];
+
+        public AuthenticationFilter(string[] rolesAllowed, string[] permissionsAllowed)
+        {
+            this.rolesAllowed = rolesAllowed;
+            this.permissionsAllowed = permissionsAllowed;
+        }
+
         public async Task OnAuthorizationAsync(AuthorizationFilterContext context)
         {
             string authorizationHeader = context.HttpContext.Request.Headers["Authorization"];
@@ -50,6 +60,28 @@ namespace WebApiFilters
                         {
                             Message = "Header 'Authorization' expired",
                         });
+                    }
+                    else
+                    {
+                        var securityService = base.GetService<SecurityService>(context);
+
+                        var userLogged = sessionLogic.GetUserLogged();
+
+                        var checkUserPermissions = await securityService.CheckPermissionsAsync(userLogged.Id, this.permissionsAllowed);
+                        var checkUserRole = await securityService.CheckRoleAsync(userLogged.Id, this.rolesAllowed);
+
+                        if (!checkUserPermissions || !checkUserRole)
+                        {
+                            context.Result = new ObjectResult(
+                                new
+                                {
+                                    Message = "The user hasn't the right permissions to access this endpoint."
+                                }
+                            )
+                            {
+                                StatusCode = (int)HttpStatusCode.Forbidden
+                            };
+                        }
                     }
                 }
             }
