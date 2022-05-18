@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pxvI67U+4q5g4KCmhTHet4RbrEu9g4Zm4NdtGwbIxN0Kkn/42GGvXuHVkfPauZ/mXo+1r9gjtprmKQGvlutc9w==",
+  "dgSpecHash": "qXNTu4uCZBEoJrqdhGkhByZtlwtS0P3bZqLhhhlfniAr1OUtt/kDm945lkh7HI5PGZu3+MzBPy99Fy+WOvnnqg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj",
+  "projectFilePath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\DataAccess\\DataAccessInterface\\DataAccessInterface.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel Acevedo\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.4\\microsoft.entityframeworkcore.6.0.4.nupkg.sha512",
     "C:\\Users\\Daniel Acevedo\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.4\\microsoft.entityframeworkcore.abstractions.6.0.4.nupkg.sha512",

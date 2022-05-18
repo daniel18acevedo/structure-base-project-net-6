@@ -10,6 +10,7 @@
     <ProjectReference Include="..\BusinessLogicMapper\BusinessLogicMapper.csproj" />
     <ProjectReference Include="..\BusinessLogicMapperInterface\BusinessLogicMapperInterface.csproj" />
     <ProjectReference Include="..\..\Session\SessionFactory\SessionFactory.csproj" />
+    <ProjectReference Include="..\..\Security\SecurityFactory\SecurityFactory.csproj" />
   </ItemGroup>
 
   <ItemGroup>

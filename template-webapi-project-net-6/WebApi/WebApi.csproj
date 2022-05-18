@@ -18,7 +18,7 @@
     <ProjectReference Include="..\Model\Model.csproj" />
     <ProjectReference Include="..\BusinessLogicAdapter\BusinessLogicAdapter.csproj" />
     <ProjectReference Include="..\BusinessLogicFilter\BusinessLogicFilter.csproj" />
-    <ProjectReference Include="..\WebApiFilters\WebApiFilters.csproj" />
+    <ProjectReference Include="..\..\WebApiFilters\WebApiFilters\WebApiFilters.csproj" />
   </ItemGroup>
 
 </Project>

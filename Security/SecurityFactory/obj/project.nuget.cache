@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vZWI3SfE0u9l4aeUzJqVmp1e2iTKa/1DUfeolD/Xa1Uv77DhUim2B4HISTTpBGVD0dAuduxKqkTO1FazAi1Y6A==",
+  "dgSpecHash": "bdw85UtjO7sATwbztcEJNAYa4IaHe8KtPNQFD21XXYDw1wGAsBx90svIFvbzWq9+jOaKt3InentxfdC+PYBRjQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\Security\\SecurityFactory\\SecurityFactory.csproj",
+  "projectFilePath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\Security\\SecurityFactory\\SecurityFactory.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel Acevedo\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.4\\microsoft.entityframeworkcore.6.0.4.nupkg.sha512",
     "C:\\Users\\Daniel Acevedo\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.4\\microsoft.entityframeworkcore.abstractions.6.0.4.nupkg.sha512",

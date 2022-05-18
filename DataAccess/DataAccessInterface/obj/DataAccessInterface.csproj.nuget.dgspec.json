@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj": {}
+    "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\DataAccess\\DataAccessInterface\\DataAccessInterface.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj": {
+    "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\DataAccess\\DataAccessInterface\\DataAccessInterface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\DataAccess\\DataAccessInterface\\DataAccessInterface.csproj",
         "projectName": "DataAccessInterface",
-        "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\DataAccessInterface.csproj",
+        "projectPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\DataAccess\\DataAccessInterface\\DataAccessInterface.csproj",
         "packagesPath": "C:\\Users\\Daniel Acevedo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\template-webapi-project-net-6\\DataAccessInterface\\obj\\",
+        "outputPath": "C:\\Users\\Daniel Acevedo\\Documents\\GitHub\\structure-base-project-net-6\\DataAccess\\DataAccessInterface\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Daniel Acevedo\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -18,9 +18,11 @@ public class BaseFactory
     public void InjectDependencies()
     {
         this._services.InjectBusinessLogicsAdapter();
+        this._services.InjectValidators();
         this._services.InjectBusinessLogics();
+        
         this._services.InjectDataAccess(this._configuration.GetConnectionString("MyDataBaseConnectionString"));
         this._services.InjectSession();
-        this._services.InjectValidators();
+        this._services.InjectSecurity();
     }
 }
