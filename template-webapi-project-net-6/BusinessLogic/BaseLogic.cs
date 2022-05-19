@@ -4,9 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using BusinessLogicFilter;
 using BusinessLogicValidatorInterface;
+using DataAccessDomain;
 using DataAccessInterface;
-using DataAccessInterface.Collections;
-using DataAccessInterface.Entities;
 
 namespace BusinessLogic;
 public class BaseLogic<TEntity>

@@ -6,7 +6,7 @@ using BusinessLogic;
 using BusinessLogicFilter;
 using BusinessLogicMapperInterface;
 using BusinessLogicValidatorInterface;
-using DataAccessInterface.Collections;
+using DataAccessDomain;
 using Model;
 
 namespace BusinessLogicAdapter;

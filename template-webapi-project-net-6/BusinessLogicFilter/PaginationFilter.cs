@@ -1,5 +1,5 @@
 using System.Linq.Expressions;
-using DataAccessInterface.Entities;
+using DataAccessDomain;
 
 namespace BusinessLogicFilter;
 public class PaginationFilter<TEntity> where TEntity : class
@@ -7,7 +7,7 @@ public class PaginationFilter<TEntity> where TEntity : class
     public int Count { get; set; }
     public int Page { get; set; }
     //asc desc
-    public string? Order { get; set; } = "ASC";
+    public string? Order { get; set; } = ORDER.ASC.ToString();
     //properties
     public string[]? OrderBy { get; set; } = new string[0];
     //info to return

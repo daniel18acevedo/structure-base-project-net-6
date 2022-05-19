@@ -2,6 +2,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataAccessInterface\DataAccessInterface.csproj" />
+    <ProjectReference Include="..\DataAccessDomain\DataAccessDomain.csproj" />
+    <ProjectReference Include="..\..\Extensions\ExtensionsService\ExtensionsService.csproj" />
   </ItemGroup>
 
   <ItemGroup>

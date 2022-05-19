@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using BusinessLogicMapperInterface;
-using DataAccessInterface.Collections;
 
 namespace BusinessLogicMapper;
 public class AutoMapperWrapper : IMap

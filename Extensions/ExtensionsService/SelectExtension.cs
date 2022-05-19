@@ -3,7 +3,8 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
-namespace DataAccess.Extensions;
+
+namespace ExtenisonsService;
 
 public static class SelectExtension
 {
@@ -103,7 +104,7 @@ public static class SelectExtension
 /// <summary>
 /// Creates types that are much like anonymous types.
 /// </summary>
-public static class TupleFactory
+internal static class TupleFactory
 {
     // the dynamic module used to emit new types
     private static readonly ModuleBuilder _module = AssemblyBuilder.DefineDynamicAssembly(new AssemblyName { Name = nameof(TupleFactory) }, AssemblyBuilderAccess.Run).DefineDynamicModule(nameof(TupleFactory));

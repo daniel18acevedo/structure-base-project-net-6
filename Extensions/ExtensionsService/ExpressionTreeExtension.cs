@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 
-namespace DataAccess.Extensions;
+namespace ExtenisonsService;
 public static class ExpressionTreeExtension
 {
     public static Expression<Func<TEntity, bool>> AddLeafToRightWithAnd<TEntity>(this Expression<Func<TEntity, bool>> oldExpression, params Expression<Func<TEntity, bool>>[] newExpressions)
@@ -19,7 +19,7 @@ public static class ExpressionTreeExtension
 }
 
 //https://stackoverflow.com/questions/10613514/how-can-i-combine-two-lambda-expressions-without-using-invoke-method
-class SwapVisitor : ExpressionVisitor
+internal class SwapVisitor : ExpressionVisitor
 {
     private readonly Expression from, to;
     public SwapVisitor(Expression from, Expression to)

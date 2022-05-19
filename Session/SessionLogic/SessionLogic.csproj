@@ -2,7 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SessionInterface\SessionInterface.csproj" />
-    <ProjectReference Include="..\..\template-webapi-project-net-6\DataAccessInterface\DataAccessInterface.csproj" />
+    <ProjectReference Include="..\..\DataAccess\DataAccessInterface\DataAccessInterface.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -1,6 +1,4 @@
-﻿using DataAccessInterface.Collections;
-
-namespace BusinessLogicMapperInterface;
+﻿namespace BusinessLogicMapperInterface;
 public interface IMap
 {
     TDestination Map<TDestination>(object source);

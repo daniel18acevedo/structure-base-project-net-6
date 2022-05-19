@@ -1,7 +1,7 @@
-using DataAccessInterface.Collections;
+using DataAccessDomain;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataAccess.Extensions;
+namespace ExtenisonsService;
 
 public static class PagedExtension
 {

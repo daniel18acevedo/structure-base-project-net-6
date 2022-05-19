@@ -1,4 +1,4 @@
-namespace DataAccessInterface.Collections;
+namespace DataAccessDomain;
 public class PagedList<T> where T : class
 {
     public int PageIndex { get; set; }

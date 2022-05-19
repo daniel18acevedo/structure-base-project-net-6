@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BusinessLogicFilter;
-using DataAccessInterface.Entities;
+using DataAccessDomain;
 using FluentValidation;
 
 namespace BusinessLogicValidator.Filter;

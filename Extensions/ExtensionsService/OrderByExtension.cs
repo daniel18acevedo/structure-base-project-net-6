@@ -1,8 +1,8 @@
 using System.Linq.Expressions;
 using System.Reflection;
-using DataAccessInterface.Entities;
+using DataAccessDomain;
 
-namespace DataAccess.Extensions;
+namespace ExtenisonsService;
 
 public static class OrderByExtension
 {
@@ -49,7 +49,7 @@ public static class OrderByExtension
     }
 }
 
-public static class Helper
+internal static class Helper
 {
     public static IEnumerable<T> BuildOrderBys<T>(
         this IEnumerable<T> source,

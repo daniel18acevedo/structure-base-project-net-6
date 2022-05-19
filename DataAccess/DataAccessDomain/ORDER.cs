@@ -1,4 +1,4 @@
-namespace DataAccessInterface.Entities;
+namespace DataAccessDomain;
 public enum ORDER
 {
     ASC,

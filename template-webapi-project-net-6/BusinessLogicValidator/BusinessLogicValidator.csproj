@@ -14,8 +14,9 @@
     <ProjectReference Include="..\BusinessLogicValidatorInterface\BusinessLogicValidatorInterface.csproj" />
     <ProjectReference Include="..\Model\Model.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
-    <ProjectReference Include="..\DataAccessInterface\DataAccessInterface.csproj" />
     <ProjectReference Include="..\BusinessLogicFilter\BusinessLogicFilter.csproj" />
+    <ProjectReference Include="..\..\DataAccess\DataAccessDomain\DataAccessDomain.csproj" />
+    <ProjectReference Include="..\..\DataAccess\DataAccessInterface\DataAccessInterface.csproj" />
   </ItemGroup>
 
 </Project>

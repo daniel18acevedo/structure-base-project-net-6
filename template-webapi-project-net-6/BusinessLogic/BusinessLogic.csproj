@@ -2,10 +2,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
-    <ProjectReference Include="..\DataAccessInterface\DataAccessInterface.csproj" />
     <ProjectReference Include="..\BusinessLogicValidatorInterface\BusinessLogicValidatorInterface.csproj" />
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
     <ProjectReference Include="..\BusinessLogicFilter\BusinessLogicFilter.csproj" />
+    <ProjectReference Include="..\..\DataAccess\DataAccessInterface\DataAccessInterface.csproj" />
+    <ProjectReference Include="..\..\DataAccess\DataAccessDomain\DataAccessDomain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

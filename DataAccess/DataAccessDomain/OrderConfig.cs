@@ -1,4 +1,4 @@
-namespace DataAccessInterface.Entities;
+namespace DataAccessDomain;
 public class OrderConfig
 {
     public ORDER OrderBy { get; set; } = ORDER.ASC;
